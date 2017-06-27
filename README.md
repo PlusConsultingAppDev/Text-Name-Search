@@ -25,7 +25,7 @@ The application must find names of the following formats, regardless of casing:
 
 The output of the application needs to include the following:
 * Name
-* Number of Occurrances
+* Number of Occurrences
 
 
 For the purposes of this test, use the following information when constructing your application:
