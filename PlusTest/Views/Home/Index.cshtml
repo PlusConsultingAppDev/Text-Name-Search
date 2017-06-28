@@ -1,0 +1,39 @@
+﻿@model PlusTest.Models.ResultsViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="home-page row">
+    @if (!string.IsNullOrEmpty(Model?.Message))
+    {
+        <h3>@Model.Message</h3>
+    }
+
+    @if (Model != null && Model.Results.Count > 0)
+    {
+        <div class="col-lg-12">
+            <h3>Results</h3>
+            <ul>
+                @foreach (var item in Model.Results)
+                {
+                    <li>@($"{item.Key.FirstName} {item.Key.MiddleName} {item.Key.LastName} ({item.Value})")</li>
+                }
+            </ul>
+            <hr/>
+        </div>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-lg-12">
+            <h3>Enter the text you'd like to search below.</h3>
+            <textarea name="text">@(Model != null ? Model.Text : "")</textarea>
+        </div>
+        <div class="col-lg-3 submit">
+            <input type="submit" class="btn btn-primary" />
+        </div>
+    }
+
+</div>

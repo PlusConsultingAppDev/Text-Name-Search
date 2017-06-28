@@ -1,0 +1,6 @@
+.vs/*
+PlusTest.Tests/bin/*
+PlusTest.Tests/obj/*
+PlusTest/bin/*
+PlusTest/obj/*
+packages/*
