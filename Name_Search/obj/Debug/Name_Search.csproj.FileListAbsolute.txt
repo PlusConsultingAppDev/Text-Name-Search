@@ -1,0 +1,9 @@
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\bin\Debug\Name_Search.exe.config
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\bin\Debug\Name_Search.exe
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\bin\Debug\Name_Search.pdb
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.csprojResolveAssemblyReference.cache
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.Form1.resources
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.Properties.Resources.resources
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.csproj.GenerateResource.Cache
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.exe
+c:\users\dines\onedrive\documents\visual studio 2017\Projects\Name_Search\Name_Search\obj\Debug\Name_Search.pdb
