@@ -1,0 +1,19 @@
+﻿@model EmployeeSearch.ViewModel.EmployeeViewModel
+@using EmployeeSearch.Models;
+@*<table>
+    <tr>
+        <td>Employee code</td>
+        <td>Employee Name</td>
+    </tr>
+    @foreach (Employee o in Model.Employees)
+    {
+        <tr>
+            <td>@o.EmployeeCode</td>
+            <td>@o.EmployeeName</td>
+        </tr>
+    }
+</table>*@
+@{
+    WebGrid obj = new WebGrid(Model.Employees);
+}
+@obj.GetHtml();

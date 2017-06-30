@@ -1,0 +1,72 @@
+﻿@model EmployeeSearch.ViewModel.EmployeeViewModel
+@using EmployeeSearch.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EnterEmployee</title>
+</head>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<body>
+    <div> 
+       
+        <form id="frm1">
+            <i>Employee Name</i> @Html.TextBoxFor(m => m.Employee.EmployeeName) <br />
+            @Html.ValidationMessageFor(x => x.Employee.EmployeeName)<br />
+            <i> Employee Code </i> @Html.TextBoxFor(m => m.Employee.EmployeeCode)<br />
+            @Html.ValidationMessageFor(x => x.Employee.EmployeeCode)<br />
+        </form>
+            <input id="Btn" type="button" value="Add Employee" onclick="SendData()" />
+        
+      <br />
+        <div id="status"></div>
+     <table id="tbl">
+         <tr>
+                <td>Employee Code</td>
+                <td>Employee Name</td>
+         </tr>
+     </table>
+        <script language="javascript">
+            $("#status").text("Loading...");
+            $.get("getEmployees", null, BindData);
+            function BindData(Employees)
+            {
+                var tbl = $("#tbl"); // got reference of the table
+                // For loop 
+                for (var j = 0; j < Employees.length ; j++)
+                {
+                    var newRow = "<tr>" +
+                     "<td>" + Employees[j].EmployeeCode + "</td>" +
+                     "<td>" + Employees[j].EmployeeName + "</td>" +
+                 "</tr>";
+                    tbl.append(newRow);
+                }
+                $("#status").text("");
+                
+            }
+            function SendData()
+            {
+                // post call to the MVC controller
+                // reference of the form , serialize 
+                
+                $("#status").text("Adding please wait....");
+                var frm = $("#frm1").serialize();
+                $.post("Submit", frm, BindData);
+                // set the Employee code and name textbox
+                // nothing
+                $("#Employee_EmployeeName").val("");
+                $("#Employee_EmployeeCode").val("");
+               
+            }
+        </script>
+        
+    </div>
+</body>
+</html>

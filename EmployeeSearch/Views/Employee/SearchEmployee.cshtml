@@ -1,0 +1,27 @@
+﻿@model EmployeeSearch.ViewModel.EmployeeViewModel
+@using EmployeeSearch.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchEmployee</title>
+</head>
+<body>
+    <div> 
+        <form action="SearchEmployee" method="post">
+        Enter Employee Name :- <input name="txtEmployeeName" id="Text1" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="Search Employee" />
+        </form>
+    </div>
+    <br />
+    
+   @Html.Partial("DisplayEmployees",Model)
+
+</body>
+</html>
