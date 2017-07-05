@@ -1,0 +1,30 @@
+
+        /*
+        Code doesn't compile yet... workflow explanation in comments on MVC.ActionMethod. If I'm able to continue I complete the code.
+
+        ** this application would be totally configurable from the backend**
+        ** this application would have a configuration GUI for the users to CRUD Employees and CRUD Search Criterion **
+        ** this application can persist results and return dashboard analysis to the client view ** 
+        ** this application is 100% configurable and extensible **
+        ** cant be done in 1-hour !!! **
+
+        1. Employee Data originates from Repository Accessed by LinqQuery/EntityFramework/SQL Server StoredProcedures
+        2. Search Criterion (currently 3 or 4) are stored on SQL ServerDB as regExp patterns.
+        3. Raw Input Text Data is entered into the browser and sent over HTTP to a MVC controller/
+        4. MVCController invokes the repository (data access layer) to get latest EmpData and SearchCriterion from the Store
+        3. WebService returns the EmployeeData and SearchCriterion and those objects are traversed as such:
+        - for each searchCriterion (basepattern) -- traverse each employeeObject and do the the following:
+               - extract and parse the empFullName and create a dynamic RegExpStringPattern that follows the current base pattern
+               - accumulate each custom regex pattern per employee into an thisEmployeeSearch object.
+        - after this completes you should have a collection of thisEmployeeSearch objects covering ALL EMPLOYEES from the searchEmpTable
+        - next the input text received on the MVC SearchEmployee Action method will process each object (subsequently applying all custom regExp patterns on the inputText)
+        - RegExp Match counts on each execution will be added to the total count on each "thisEmployeeSearch" object.
+        - on completion of processes (of each employee) those "thisEmployeeSearch" objects with an accumMatchCount > 1 will be returned to the client
+        - the client View will traverse the objects and deliver the results (with counts) to the browser
+
+        *** for the future ... for your client ***
+        - instead of an input textBox for searchText input. The client will just paste URLs of the webPages that this search service would scrape input data from and process
+        - the output returned will be delivered as a dashboard report.. even a history report of occurrences  each URL mentions each employee.
+        - output data can be persisted on the database
+        - other analysis can be done using the persisted results
+        */
