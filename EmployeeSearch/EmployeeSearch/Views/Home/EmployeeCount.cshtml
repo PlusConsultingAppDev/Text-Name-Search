@@ -1,0 +1,16 @@
+﻿@model List<EmployeeSearch.Models.Models.NameCount>
+
+@{
+    ViewBag.Title = "EmployeeCount";
+}
+<a href="~/Home">Search another Employee</a>
+<h2>Results: </h2>
+
+<div class="row">
+    <div class="col-lg-6">
+        @foreach (var variant in Model)
+        {
+            <p>@variant.Name : <span class="badge">@variant.Count</span></p>
+        }
+    </div>
+</div>

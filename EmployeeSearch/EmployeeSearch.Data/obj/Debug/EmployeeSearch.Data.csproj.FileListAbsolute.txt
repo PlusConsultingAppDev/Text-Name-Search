@@ -1,0 +1,7 @@
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\bin\Debug\EmployeeSearch.Data.dll
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\bin\Debug\EmployeeSearch.Data.pdb
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\bin\Debug\EmployeeSearch.Models.dll
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\bin\Debug\EmployeeSearch.Models.pdb
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\obj\Debug\EmployeeSearch.Data.csprojResolveAssemblyReference.cache
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\obj\Debug\EmployeeSearch.Data.dll
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Data\obj\Debug\EmployeeSearch.Data.pdb

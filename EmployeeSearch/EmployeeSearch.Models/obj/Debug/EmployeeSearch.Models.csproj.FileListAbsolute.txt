@@ -1,0 +1,5 @@
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Models\bin\Debug\EmployeeSearch.Models.dll
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Models\bin\Debug\EmployeeSearch.Models.pdb
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Models\obj\Debug\EmployeeSearch.Models.csprojResolveAssemblyReference.cache
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Models\obj\Debug\EmployeeSearch.Models.dll
+C:\Users\praisekek\OneDrive\1GuildBackup\Guild-github\firstRepo\matthew-wilkinson-individual-work\DVD_Library\EmployeeSearch\EmployeeSearch.Models\obj\Debug\EmployeeSearch.Models.pdb

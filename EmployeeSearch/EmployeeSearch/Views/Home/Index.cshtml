@@ -1,0 +1,41 @@
+﻿@model EmployeeSearch.Models.EmployeeInArticleVM
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="col-md-12">
+    @using (Html.BeginForm("EmployeeCount", "Home", FormMethod.Post))
+    {
+
+        <div class="col-md-8">
+            <h2>Provide Employee Information</h2>
+            <div class="col-md-4">
+                @Html.LabelFor(e => e.Employee.FirstName)<br />
+                @Html.TextBoxFor(e => e.Employee.FirstName)<br />
+            </div>
+
+            <div class="col-md-4">
+                @Html.LabelFor(e => e.Employee.MiddleName)<br />
+                @Html.TextBoxFor(e => e.Employee.MiddleName)<br />
+            </div>
+
+            <div class="col-md-4">
+                @Html.LabelFor(e => e.Employee.LastName)<br />
+                @Html.TextBoxFor(e => e.Employee.LastName)<br />
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <h2>Provide Article Information</h2>
+            @Html.LabelFor(e => e.Article.Title)<br />
+            @Html.TextBoxFor(e => e.Article.Title)<br />
+
+            @Html.LabelFor(e => e.Article.Body)<br />
+            @Html.TextAreaFor(e => e.Article.Body)<br />
+        </div>
+
+
+            <button>submit</button>
+            }
+        </div>
