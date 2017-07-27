@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>FindEmployee</h2>
+<body ng-app="myApp">
+    <div id="tblSubs" ng-controller="EmpCtrl">
+        <input type='text' ng-model='input' ng-change="getEmp(empList, input)" placeholder="Search Employee" />
+
+        <h3>List of employees</h3>
+        <div ng-repeat="emp in empList | findEmployee:input">{{emp.name}}</div>
+        <h3>Filter Output</h3>
+
+        <h4>Name : {{name}}</h4>
+        <h4>Number of Occurrences : {{empNo}}</h4>
+    </div>
+</body>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/Employee/EmpModel.js"></script>
+<script src="~/Scripts/Employee/EmpController.js"></script>
+<script src="~/Scripts/Employee/EmpService.js"></script>
+
+
+
