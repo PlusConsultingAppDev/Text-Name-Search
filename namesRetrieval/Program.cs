@@ -11,11 +11,6 @@ namespace namesRetrieval
     {
         static void Main(string[] args)
         {
-
-
-
-            
-
             Console.WriteLine("Begin Test");
             Console.WriteLine("This test will input 3 Names: Connor Gary Smith, Seth David Greenly, and David Warren Black");
             Console.WriteLine("The process is simple, a Text Document will be searched for variations of each of those three names");
@@ -89,6 +84,10 @@ namespace namesRetrieval
 
                 var text = textdoc.Split(' ');
                 var count = 0;
+                var namecombo1 = false;
+                var namecombo2 = false;
+                var namecombo3 = false;
+                var namecombo4 = false;
                 for (int i = 0; i < text.Length; i++)
                 {
                     try
@@ -100,17 +99,25 @@ namespace namesRetrieval
                         {
                             // if first name is found, then put together a combination
                             if (combo2 == firstLast)
-                                count++;
+                                namecombo1 = true;
                             if (combo3 == firstmiddlelast)
-                                count++;
+                                namecombo2 = true;
                             if (combo3 == firstmidlast)
-                                count++;
+                                namecombo3 = true;
                             if (combo3 == firstmidplast)
-                                count++;
+                                namecombo4 = true;
                         }
                     }
                     catch { }
                 }
+                if (namecombo1 == true)
+                    count++;
+                if (namecombo2 == true)
+                    count++;
+                if (namecombo3 == true)
+                    count++;
+                if (namecombo4 == true)
+                    count++;
                 Console.WriteLine(firstmiddlelast + " " + count);
                 
 
