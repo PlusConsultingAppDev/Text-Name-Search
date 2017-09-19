@@ -11,7 +11,7 @@
     <div>
         <h2>Text Search</h2>
         <div>
-            <label for="txtSearch">Enter text to search for:</label>
+            <label for="txtSearch">Enter text to search for names:</label>
             <asp:Textbox ID="txtSearch" runat="server"></asp:Textbox>
             <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search"/>
         </div>
