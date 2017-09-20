@@ -1,0 +1,16 @@
+C:\Chicago\EchoPlusSample\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.deps.json
+C:\Chicago\EchoPlusSample\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.dll
+C:\Chicago\EchoPlusSample\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.pdb
+C:\Chicago\EchoPlusSample\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.csprojResolveAssemblyReference.cache
+C:\Chicago\EchoPlusSample\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.csproj.CoreCompileInputs.cache
+C:\Chicago\EchoPlusSample\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.AssemblyInfo.cs
+C:\Chicago\EchoPlusSample\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.dll
+C:\Chicago\EchoPlusSample\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.pdb
+C:\Chicago\Text-Name-Search\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.deps.json
+C:\Chicago\Text-Name-Search\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.dll
+C:\Chicago\Text-Name-Search\BusinessLib\bin\Debug\netstandard1.4\BusinessLib.pdb
+C:\Chicago\Text-Name-Search\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.csprojResolveAssemblyReference.cache
+C:\Chicago\Text-Name-Search\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.csproj.CoreCompileInputs.cache
+C:\Chicago\Text-Name-Search\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.AssemblyInfo.cs
+C:\Chicago\Text-Name-Search\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.dll
+C:\Chicago\Text-Name-Search\BusinessLib\obj\Debug\netstandard1.4\BusinessLib.pdb
