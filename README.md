@@ -15,7 +15,7 @@ If you do not have a copy of Visual Studio 2013+, you can download Visual Studio
 https://www.visualstudio.com/en-us/news/releasenotes/vs2013-community-vs
 
 ## Requirements
-An enterprise organization is looking to create an application used to find a preset list of names within the content of any given text value. The purpose of this application is to find employee names mentioned in news articles for a new employee engagement program. A team will be updating the list of names on a weekly basis. 
+An enterprise organization is looking to create an application used to find a preset list of names within the content of any given text value. The purpose of this application is to find employee names mentioned in news articles for a new employee engagement program. A team will be updating the list of names on a weekly basis. The application must take in a string of any size, an employee name, and return Name and Number of occurances.
 
 The application must find names of the following formats, regardless of casing:
 * [First Name] [Last Name]
