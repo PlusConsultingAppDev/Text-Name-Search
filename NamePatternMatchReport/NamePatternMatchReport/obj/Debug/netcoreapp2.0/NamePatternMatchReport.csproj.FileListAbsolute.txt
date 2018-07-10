@@ -1,0 +1,11 @@
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\bin\Debug\netcoreapp2.0\NamePatternMatchReport.deps.json
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\bin\Debug\netcoreapp2.0\NamePatternMatchReport.runtimeconfig.json
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\bin\Debug\netcoreapp2.0\NamePatternMatchReport.runtimeconfig.dev.json
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\bin\Debug\netcoreapp2.0\NamePatternMatchReport.dll
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\bin\Debug\netcoreapp2.0\NamePatternMatchReport.pdb
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.csprojAssemblyReference.cache
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.csproj.CoreCompileInputs.cache
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.AssemblyInfoInputs.cache
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.AssemblyInfo.cs
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.dll
+C:\PlusTest\Text-Name-Search\NamePatternMatchReport\NamePatternMatchReport\obj\Debug\netcoreapp2.0\NamePatternMatchReport.pdb
