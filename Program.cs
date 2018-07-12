@@ -14,7 +14,7 @@ namespace NameSearch
             Console.WriteLine("Enter the comma separated Names you want to search(No spaces after comma)");
             string EmployeeNames = Console.ReadLine();
             List<string> employeeFullNames = EmployeeNames.Split(',').ToList();
-            Console.WriteLine("Enter the text you want the names to be searched on(No spaces)");
+            Console.WriteLine("Enter the text you want the names to be searched on(No Line gaps)");
             byte[] inputBuffer = new byte[8190];
             Stream inputStream = Console.OpenStandardInput(inputBuffer.Length);
             Console.SetIn(new StreamReader(inputStream, Console.InputEncoding, false, inputBuffer.Length));
