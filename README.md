@@ -7,7 +7,7 @@ _**Fork this Repo, complete your code and submit a Pull Request to complete your
 For the purposes of this test, you can use any .NET or Client-Side architecture(s) of your choice to complete the requirements outlined below.
 
 ## Requirements
-An enterprise organization is looking to create an application used to find a preset list of names within the content of any given text value. The purpose of this application is to find employee names mentioned in news articles for a new employee engagement program. A team of will be updating the list of names on a weekly basis. The application should be designed to scale, the organization is targetting this application to crawl millions of documents a year
+An enterprise organization is looking to create an application used to find a preset list of names within the content of any given text value. The purpose of this application is to find employee names mentioned in news articles for a new employee engagement program. A team of will be updating the list of names on a weekly basis. The application should be designed to scale, the organization is targetting this application to crawl millions of documents a year.
 
 There must be a front end and it must:
 * Allow the user to enter for a name, including first, middle, and last name
