@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/NameSearch.Data/bin/Debug
+/NameSearch.Data/obj
+/NameSearch.Service/bin/Debug
+/NameSearch.Service/obj
+/NameSearch.Service.Tests/bin/Debug
+/NameSearch.Service.Tests/obj
+/NameSearch.Web/bin
+/NameSearch.Web/obj
+/packages
