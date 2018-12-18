@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Text_Name_Search.Data;
+using Text_Name_Search.Models;
 
 namespace Text_Name_Search
 {
@@ -33,6 +36,9 @@ namespace Text_Name_Search
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<TextNameSearchContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Text_Name_SearchContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

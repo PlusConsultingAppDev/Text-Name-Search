@@ -22,17 +22,17 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Text-Name-Search/1.0.0": {
+      "Text_Name_Search/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0"
         },
         "runtime": {
-          "Text-Name-Search.dll": {}
+          "Text_Name_Search.dll": {}
         },
         "compile": {
-          "Text-Name-Search.dll": {}
+          "Text_Name_Search.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -3150,7 +3150,7 @@
     }
   },
   "libraries": {
-    "Text-Name-Search/1.0.0": {
+    "Text_Name_Search/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
