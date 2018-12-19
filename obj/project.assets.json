@@ -4615,6 +4615,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "SearchServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/SearchServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SearchServices.dll": {}
+        }
       }
     }
   },
@@ -12519,6 +12529,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "SearchServices/1.0.0": {
+      "type": "project",
+      "path": "../SearchServices/SearchServices.csproj",
+      "msbuildProject": "../SearchServices/SearchServices.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12527,7 +12542,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.EntityFrameworkCore >= 2.1.4",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "SearchServices >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12559,7 +12575,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Dev\\SearchServices\\SearchServices.csproj": {
+              "projectPath": "F:\\Dev\\SearchServices\\SearchServices.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
