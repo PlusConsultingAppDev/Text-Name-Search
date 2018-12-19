@@ -1,0 +1,35 @@
+﻿@page
+@model Text_Name_Search.Pages.SearchItems.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SearchItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SearchItem.ID" />
+            <div class="form-group">
+                <label asp-for="SearchItem.Text" class="control-label"></label>
+                <input asp-for="SearchItem.Text" class="form-control" />
+                <span asp-validation-for="SearchItem.Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
