@@ -4,13 +4,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Text_Name_Search.Data;
+using SearchServices;
 
 namespace Text_Name_Search.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly TextNameSearchContext _db;
-        private SearchServices.Content svc;
+        private ContentRetrieval _svc;
 
         [BindProperty]
         public string UrlToSearch { get; set; }
@@ -32,7 +33,9 @@ namespace Text_Name_Search.Pages
                 return Page();
             }
 
-            await 
+            //await getURL goes here
+            var content = _svc.PageContents;
+
             var searchItems = _db.SearchItem;
             foreach (var searchItem in searchItems)
             {

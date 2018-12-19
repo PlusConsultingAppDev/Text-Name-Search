@@ -5,10 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Content Remove="Controllers\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <None Remove="Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Migrations\20181218221127_Initial.cs" />
     <Compile Remove="Migrations\20181218221127_Initial.Designer.cs" />
     <Compile Remove="Migrations\20181218221325_Initial.cs" />
     <Compile Remove="Migrations\20181218221325_Initial.Designer.cs" />
+    <Compile Remove="Models\Url.cs" />
   </ItemGroup>
 
   <ItemGroup>
