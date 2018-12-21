@@ -39,6 +39,9 @@ namespace Text_Name_Search
 
             services.AddDbContext<TextNameSearchContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Text_Name_SearchContext")));
+
+            services.AddTransient<SearchServices.ContentManagementService>();
+            services.AddTransient<SearchServices.NameSearchService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
