@@ -40,7 +40,6 @@ namespace SearchServices
             }
 
             return PageContents;
-
         }
 
         public string FetchPage(string uri)
