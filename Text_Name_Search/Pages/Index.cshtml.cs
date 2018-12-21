@@ -11,7 +11,7 @@ namespace Text_Name_Search.Pages
     public class IndexModel : PageModel
     {
         private readonly TextNameSearchContext _db;
-        private ContentRetrieval _svc;
+        private ContentManagementService _svc;
 
         [BindProperty]
         public string UrlToSearch { get; set; }
