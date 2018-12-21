@@ -1,3 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Numerics;
+using System.Reflection;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using SearchServices;
@@ -54,6 +61,23 @@ namespace Tests
 
             // assert that our text is in the fetched string
             Assert.IsTrue(contentToSearch.Contains(stringToFind.ToLower()));
+        }
+
+        [Test]
+        public async Task TestNameSearch()
+        {
+            // fire up an instance
+            var svc = new ContentManagementService();
+
+            var resultsList = new List<string>();
+
+            // fetch the text from the website
+            var contentToSearch = await svc.FetchPageAsync("https://github.com/PlusConsultingAppDev/Text-Name-Search");
+            var nameSearchService = new NameSearchService(contentToSearch);
+            nameSearchService.AddSearchName("Connor Gary Smith");
+            var listOfNamesFound = nameSearchService.SearchResults();
+
+            Assert.IsNotEmpty(listOfNamesFound);
         }
     }
 }
