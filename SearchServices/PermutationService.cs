@@ -16,7 +16,7 @@ namespace SearchServices
             _permutationsList = new List<string>();
         }
 
-        public IList GeneratePermutations()
+        public IList<string> GeneratePermutations()
         {
             //call name generator
             NameGenerator();
