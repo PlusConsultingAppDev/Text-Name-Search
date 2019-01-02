@@ -1,0 +1,3 @@
+{
+  "extends": "../App.Core/tslint.json"
+}
