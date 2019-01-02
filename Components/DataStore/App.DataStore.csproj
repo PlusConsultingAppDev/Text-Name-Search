@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>App.DataStore</AssemblyName>
+    <RootNamespace>App.DataStore</RootNamespace>
+    <CodeAnalysisRuleSet>..\..\Analyzers\Stylecop.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisAdditionalOptions>..\..\Analyzers\stylecop.json</CodeAnalysisAdditionalOptions>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Search\Add.sql" />
+    <None Remove="Search\GetAll.sql" />
+    <None Remove="Result\Add.sql" />
+    <None Remove="Result\GetAll.sql" />
+    <None Remove="Search\GetView.sql" />
+    <None Remove="SourceType\GetAll.sql" />
+    <None Remove="Article\GetAll.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Search\Add.sql" />
+    <EmbeddedResource Include="Search\GetView.sql" />
+    <EmbeddedResource Include="Search\GetAll.sql" />
+    <EmbeddedResource Include="Result\Add.sql" />
+    <EmbeddedResource Include="Result\GetAll.sql" />
+    <EmbeddedResource Include="SourceType\GetAll.sql" />
+    <EmbeddedResource Include="Article\GetAll.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.1" />
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Dapper.SqlBuilder" Version="1.50.5" />
+    <PackageReference Include="FastMember" Version="1.4.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\App.Core.csproj" />
+    <ProjectReference Include="..\App.Contracts\App.Contracts.csproj" />
+    <ProjectReference Include="..\App.Entities\App.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+﻿SELECT 
+	[Id]
+   ,[Name]
+   ,[URI]
+   ,[Created]
+   ,[CreatedBy]
+   ,[Modified]
+   ,[ModifiedBy]
+FROM 
+	[search].[SourceType]

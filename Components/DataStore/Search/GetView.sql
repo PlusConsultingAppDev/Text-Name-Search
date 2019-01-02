@@ -1,0 +1,17 @@
+﻿SELECT 
+	 [ResultIdentifier]
+    ,[FirstName]
+    ,[LastName]
+    ,[MiddleName]
+    ,[SearchDate]
+    ,[SearchIdentifier]
+    ,[ArticleIdentifier]
+	,[ArticleName]
+    ,[SearchText]
+    ,[Occurrences]
+    ,[Created]
+    ,[CreatedBy]
+    ,[Modified]
+    ,[ModifiedBy]
+FROM 
+	[search].[SearchResultsView];

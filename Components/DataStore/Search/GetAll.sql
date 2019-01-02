@@ -1,0 +1,11 @@
+﻿SELECT 
+	[Identifier]
+   ,[FirstName]
+   ,[LastName]
+   ,[MiddleName]
+   ,[Created]
+   ,[CreatedBy]
+   ,[Modified]
+   ,[ModifiedBy]
+FROM 
+	[search].[Search];

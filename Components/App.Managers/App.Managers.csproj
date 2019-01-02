@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>App.Managers</AssemblyName>
+    <RootNamespace>App.Managers</RootNamespace>
+    <CodeAnalysisRuleSet>..\..\Analyzers\Stylecop.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisAdditionalOptions>..\..\Analyzers\stylecop.json</CodeAnalysisAdditionalOptions>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration\App.Configuration.csproj" />
+    <ProjectReference Include="..\Core\App.Core.csproj" />
+    <ProjectReference Include="..\DataStore\App.DataStore.csproj" />
+    <ProjectReference Include="..\App.Contracts\App.Contracts.csproj" />
+    <ProjectReference Include="..\App.Entities\App.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

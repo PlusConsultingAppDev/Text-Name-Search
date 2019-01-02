@@ -1,0 +1,15 @@
+﻿SELECT 
+	[Identifier]
+   ,[SearchIdentifier]
+   ,[ArticleIdentifier]
+   ,[SearchText]
+   ,[FirstName]
+   ,[LastName]
+   ,[MiddleName]
+   ,[Occurrences]
+   ,[Created]
+   ,[CreatedBy]
+   ,[Modified]
+   ,[ModifiedBy]
+FROM 
+	[search].[Results]
