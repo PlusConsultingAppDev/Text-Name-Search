@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using SupportServices;
 
 namespace SearchServices
@@ -14,6 +15,7 @@ namespace SearchServices
 
         private readonly Dictionary<string, IList<string>> _dictionary;
         private PermutationService _permService;
+        private ContentManagementService _contentManagementService;
 
         // fetch the text from the website
         private string _stringToSearch;
@@ -21,6 +23,7 @@ namespace SearchServices
         public NameSearchService()
         {
             _dictionary = new Dictionary<string, IList<string>>();
+            _contentManagementService = new ContentManagementService();
         }
 
         public void AddSearchName(string name)
@@ -32,12 +35,11 @@ namespace SearchServices
         // SearchResults takes the string to be searched and builds a list of strings
         // found in our dictionary of string variants.  The resultant list of key/value 
         // pairs indicates how many times the string occurred in the stringToSearch
-        public List<KeyValuePair<string, int>> SearchResults(string stringToSearch)
+        public async Task<List<KeyValuePair<string, int>>> SearchResults(string url)
         {
-           _stringToSearch = stringToSearch;
+            _stringToSearch = await _contentManagementService.FetchPageAsync(url);
 
            // fire up an instance
-            var svc = new ContentManagementService();
 
             var resultsList = new List<KeyValuePair<string, int>>();
 
