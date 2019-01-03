@@ -35,7 +35,6 @@ namespace Text_Name_Search
                     options.UseSqlServer(Configuration.GetConnectionString("Text_Name_SearchContext")));
 
             //Register our services for DI
-            services.AddScoped<SearchServices.ContentManagementService>();
             services.AddScoped<SearchServices.NameSearchService>();
         }
 
