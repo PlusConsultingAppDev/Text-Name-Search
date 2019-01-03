@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using SupportServices;
 
-namespace Tests
+namespace NameSearchTests
 {
     [TestFixture]
     public class SupportServicesUnitTests
