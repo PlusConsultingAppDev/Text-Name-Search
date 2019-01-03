@@ -11,9 +11,9 @@ function deployPlatform() {
 
     "$sqlPackage" /Action:Publish\
         /OverwriteFiles:True\
-        /SourceFile:"$appDir\\Database\\Platform\\bin\\Debug\\GildedRose.Platform.dacpac" \
-        /Profile:"$appDir\\Database\\Platform\\GildedRose.Platform.publish.xml"\
-        /TargetConnectionString:"server=(localdb)\\MSSQLLocalDB;database=GildedRose.Platform;Integrated Security=True;" \
+        /SourceFile:"$appDir\\Database\\Platform\\bin\\Debug\\App.Platform.dacpac" \
+        /Profile:"$appDir\\Database\\Platform\\App.Platform.publish.xml"\
+        /TargetConnectionString:"server=(localdb)\\MSSQLLocalDB;database=App.Platform;Integrated Security=True;" \
         /Variables:Environment=Local
 
     printf "${BLUE}Published Platform Database${NC}\n"
@@ -29,9 +29,9 @@ function deployMembership() {
 
     "$sqlPackage" /Action:Publish\
         /OverwriteFiles:True\
-        /SourceFile:"$appDir\\Database\\Membership\\bin\\Debug\\GildedRose.Membership.dacpac" \
-        /Profile:"$appDir\\Database\\Membership\\GildedRose.Membership.publish.xml"\
-        /TargetConnectionString:"server=(localdb)\\MSSQLLocalDB;database=GildedRose.Membership;Integrated Security=True;" \
+        /SourceFile:"$appDir\\Database\\Membership\\bin\\Debug\\App.Membership.dacpac" \
+        /Profile:"$appDir\\Database\\Membership\\App.Membership.publish.xml"\
+        /TargetConnectionString:"server=(localdb)\\MSSQLLocalDB;database=App.Membership;Integrated Security=True;" \
         /Variables:Environment=Local
 
     printf "${BLUE}Published Membership Database${NC}\n"

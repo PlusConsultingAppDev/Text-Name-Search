@@ -17,15 +17,23 @@ namespace App.Api.Controllers
         }
 
         [HttpGet]
-        [Route("search")]
-        public async Task<IActionResult> Search(string firstName, string middleName, string lastName)
+        [Route("first/{firstName}/last/{lastName}/middle/{middleName}")]
+        public async Task<IActionResult> Search([FromRoute]string firstName, [FromRoute]string lastName, [FromRoute]string middleName)
         {
-            var allItems = await this.searchRepo.Search(firstName, middleName, lastName);
+            var searchIdentifier = await this.searchRepo.Search(firstName, lastName, middleName);
+            return this.Ok(searchIdentifier);
+        }
+
+        [HttpGet]
+        [Route("get/{id}")]
+        public async Task<IActionResult> Search([FromRoute]Guid identifier)
+        {
+            var allItems = await this.searchRepo.Get(identifier);
             return this.Ok(allItems);
         }
 
         [HttpGet]
-        [Route("search/results")]
+        [Route("results")]
         public async Task<IActionResult> GetAll()
         {
             var allItems = await this.searchRepo.GetAll();
@@ -33,7 +41,7 @@ namespace App.Api.Controllers
         }
 
         [HttpGet]
-        [Route("search/view")]
+        [Route("view")]
         public async Task<IActionResult> GetView()
         {
             var allItems = await this.searchRepo.GetView();

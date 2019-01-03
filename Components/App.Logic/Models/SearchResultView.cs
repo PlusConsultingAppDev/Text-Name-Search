@@ -2,7 +2,7 @@
 
 namespace App.Logic.Models
 {
-    public class SearchResultsView
+    public class SearchResultView
     {
         public Guid ResultIdentifier { get; set; }
 

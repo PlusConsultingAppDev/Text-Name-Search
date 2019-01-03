@@ -9,11 +9,11 @@ namespace App.Logic.Models
 
         public Guid SearchIdentifier { get; set; }
 
-        public string FullFirstName { get; set; }
+        public string FirstName { get; set; }
 
-        public string FullLastName { get; set; }
+        public string LastName { get; set; }
 
-        public string FullMiddleName { get; set; }
+        public string MiddleName { get; set; }
 
         public int TotalOccurrences { get; set; }
 

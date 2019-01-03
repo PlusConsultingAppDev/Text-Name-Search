@@ -32,6 +32,17 @@ namespace App.Managers
             return await this.Store.GetListAsync<SearchResultsView>(query);
         }
 
+        public async Task<Search> Get(Guid identifier)
+        {
+            var query = await this.GetQueryAsync();
+            return await this.Store.FirstOrDefaultAsync<Search>(
+                query,
+                new
+                {
+                   SearchIdentifier = identifier,
+                });
+        }
+
         public async Task<Guid> Add(Search search)
         {
             var query = await this.GetQueryAsync();
@@ -46,12 +57,12 @@ namespace App.Managers
                 });
         }
 
-        public async Task<IEnumerable<Result>> Search(string[] nameSequenceArray, string[] contentArray)
+        public async Task<IEnumerable<Result>> Search(List<string> nameSequences, string[] contentArray)
         {
             List<Result> results = new List<Result>();
             foreach (var content in contentArray)
             {
-                var items = await this.Search(nameSequenceArray, content, 0, 0, 0, null);
+                var items = await this.Search(nameSequences, content, 0, 0, 0, null);
                 if (items != null)
                 {
                     results.AddRange(items);
@@ -61,7 +72,7 @@ namespace App.Managers
             return results;
         }
 
-        private async Task<IEnumerable<Result>> Search(string[] nameSequenceArray, string content, int arrayIndex, int occurences, int lastSearchIndex, List<Result> results)
+        private async Task<IEnumerable<Result>> Search(List<string> nameSequences, string content, int arrayIndex, int occurences, int lastSearchIndex, List<Result> results)
         {
             int searchIndex = 0;
             if (results == null)
@@ -71,16 +82,16 @@ namespace App.Managers
 
             if (lastSearchIndex == 0)
             {
-                searchIndex = content.IndexOf(nameSequenceArray[arrayIndex]);
+                searchIndex = content.IndexOf(nameSequences[arrayIndex]);
             }
             else
             {
-                searchIndex = content.IndexOf(nameSequenceArray[arrayIndex], lastSearchIndex + nameSequenceArray[arrayIndex].Length);
+                searchIndex = content.IndexOf(nameSequences[arrayIndex], lastSearchIndex + nameSequences[arrayIndex].Length);
             }
 
             if (searchIndex > 0)
             {
-                return await this.Search(nameSequenceArray, content, arrayIndex, occurences + 1, searchIndex, results);
+                return await this.Search(nameSequences, content, arrayIndex, occurences + 1, searchIndex, results);
             }
             else
             {
@@ -90,15 +101,15 @@ namespace App.Managers
                     results.Add(new Result()
                     {
                         Occurrences = occurences,
-                        SearchText = nameSequenceArray[arrayIndex],
+                        SearchText = nameSequences[arrayIndex],
                         Created = DateTime.UtcNow,
                         CreatedBy = 1,
                     });
                 }
 
-                if (arrayIndex + 1 < nameSequenceArray.Length)
+                if (arrayIndex + 1 < nameSequences.Count)
                 {
-                    return await this.Search(nameSequenceArray, content, arrayIndex + 1, 0, 0, results);
+                    return await this.Search(nameSequences, content, arrayIndex + 1, 0, 0, results);
                 }
                 else
                 {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace App.Logic.Models
 {
@@ -11,5 +12,7 @@ namespace App.Logic.Models
         public string LastName { get; set; }
 
         public string MiddleName { get; set; }
+
+        public List<ResultModel> Results { get; set; }
     }
 }

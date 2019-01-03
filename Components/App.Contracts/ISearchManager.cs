@@ -7,9 +7,11 @@ namespace App.Contracts
 {
     public interface ISearchManager
     {
-        Task<IEnumerable<Result>> Search(string[] nameSequenceArray, string[] contentArray);
+        Task<IEnumerable<Result>> Search(List<string> nameSequenceArray, string[] contentArray);
 
         Task<IEnumerable<Search>> GetAll();
+
+        Task<Search> Get(Guid identifier);
 
         Task<IEnumerable<SearchResultsView>> GetView();
 

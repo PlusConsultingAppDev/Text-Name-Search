@@ -2,7 +2,7 @@
 appDir=$1
 
 function runApi() {
-    cd ../../Web/Api/GildedRose.Api
+    cd ../../Web/Api
     start cmd.exe //C dotnet watch -v run
 }
 

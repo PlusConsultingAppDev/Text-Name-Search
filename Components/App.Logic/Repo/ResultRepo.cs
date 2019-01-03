@@ -39,5 +39,13 @@ namespace App.Logic.Repo
                 SearchText = result.SearchText,
             });
         }
+
+        public async Task Add(List<ResultModel> results)
+        {
+            foreach (var result in results)
+            {
+                await this.Add(result);
+            }
+        }
     }
 }

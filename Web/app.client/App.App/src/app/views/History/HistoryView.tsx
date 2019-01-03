@@ -1,100 +1,115 @@
 import * as React from "react";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import { ArticleActions, SourceTypeActions, ResultActions } from "app/actions";
-import * as ArticleService from "app/services/articleService";
-import * as ResultService from "app/services/resultService";
-import * as SourceTypeService from "app/services/sourceTypeService";
+import { SearchActions } from "app/actions";
+import * as SearchService from "app/services/searchService";
 import { Shell } from "app/components/Shell/shell";
-// import { ArticleModel, ResultModel, SourceTypeModel } from "models";
 import { RootState } from "app/reducers";
 import { omit } from "core/utils";
+import * as _ from "lodash";
+import * as moment from "moment";
 
+import { SearchResultViewModel } from "app/models";
 export namespace HistoryView {
   export interface FluxProps {
-    ArticleState: RootState.ArticleState;
-    ResultState: RootState.ResultState;
-    SourceTypeState: RootState.SourceTypeState;
-    AuthenticationState: RootState.AuthenticationState;
-    articleActions: ArticleActions;
-    resultActions: ResultActions;
-    sourceTypeActions: SourceTypeActions;
+    SearchResultViewState: RootState.SearchResultViewState;
+  }
 
+  export interface DispatchProps {
+    searchActions: SearchActions;
   }
 }
 
 @connect(
-
-  (state: RootState, ownProps): Pick<HistoryView.FluxProps, "ArticleState" | "ResultState" | "SourceTypeState" | "AuthenticationState"> => {
+  (state: RootState, ownProps): Pick<HistoryView.FluxProps,
+    "SearchResultViewState"> => {
     return {
-      AuthenticationState: state.authenticationData,
-      ArticleState: state.articleData, SourceTypeState:
-        state.sourceTypeData,
-      ResultState: state.resultData,
+      SearchResultViewState: state.searchViewData,
     };
   },
-  (dispatch: Dispatch): Pick<HistoryView.FluxProps, "articleActions" | "resultActions" | "sourceTypeActions"> => ({
-    articleActions: bindActionCreators(omit(ArticleActions, "Type"), dispatch),
-    resultActions: bindActionCreators(omit(ResultActions, "Type"), dispatch),
-    sourceTypeActions: bindActionCreators(omit(SourceTypeActions, "Type"), dispatch),
-  }),
+  (dispatch: Dispatch): Pick<HistoryView.DispatchProps,
+    "searchActions"> => ({
+      searchActions: bindActionCreators(omit(SearchActions, "Type"), dispatch),
+    }),
 )
 
-export class HistoryView extends React.Component<HistoryView.FluxProps, {}> {
+export class HistoryView extends React.Component<HistoryView.FluxProps & HistoryView.DispatchProps, {}> {
   // tslint:disable-next-line:no-any
-  constructor(props: HistoryView.FluxProps, context?: any) {
+  constructor(props: HistoryView.FluxProps & HistoryView.DispatchProps, context?: any) {
     super(props, context);
-    this.state = {
-    };
   }
 
   public async componentDidMount(): Promise<void> {
-    const articles = await ArticleService.getAll();
-    this.props.articleActions.AddOverwriteArticle(articles);
-
-    const results = await ResultService.getAll();
-    this.props.resultActions.AddOverwriteResults(results);
-
-    const sourceTypes = await SourceTypeService.getAll();
-    this.props.sourceTypeActions.AddOverwriteSourceType(sourceTypes);
+    const searchResults = await SearchService.getSearchResults();
+    this.props.searchActions.AddOverwriteSearchResults(searchResults);
   }
 
   public render(): JSX.Element {
-
-    if (!this.props.ArticleState || this.props.ArticleState.length === 0 ||
-      !this.props.ResultState || this.props.ResultState.length === 0 ||
-      !this.props.SourceTypeState || this.props.SourceTypeState.length === 0) {
-      return (<div>Loading Data...</div>);
-    }
-
-    const dateContainerStyle = {
-      width: "220px",
-      marginTop: "20px",
+    const searchItems = _.uniqBy(this.props.SearchResultViewState, "searchIdentifier");
+    const searchResultContainerStyle = {
+      width: "600px",
+      marginTop: "12px",
     } as React.CSSProperties;
-
-    const tabContainerStyle = {
-      width: "800px",
-      marginTop: "20px",
-    } as React.CSSProperties;
-
     return (
       <>
         <Shell hideFooter={true}>
-          <div>
-            <div>
-              <div>
-                <div style={dateContainerStyle}>
-                  ITEM HERE
-                </div>
-              </div>
-              <div style={tabContainerStyle}>
-                BUTTONS
-              </div>
-              BODY HERE
+          <div className="pure-form">
+            <h1>
+              Saved Search History Page
+            </h1>
+            <div style={searchResultContainerStyle}>
+              {searchItems.map((result, index) => (this.renderSearchData(result)))}
             </div>
           </div>
         </Shell>
       </>
+    );
+  }
+
+  private renderSearchData(searchItem: SearchResultViewModel): JSX.Element {
+    const labelStyle = {
+      fontWeight: "bold",
+    } as React.CSSProperties;
+    const resultStyle = {
+      backgroundColor: "#696969",
+      borderRadius: 12,
+      marginTop: "18px",
+      marginLeft: "18px",
+    } as React.CSSProperties;
+    const itemStyle = {
+      marginLeft: "18px",
+    } as React.CSSProperties;
+    const occurrenceStyle = {
+      paddingLeft: "38px",
+    } as React.CSSProperties;
+    return (
+      <div style={resultStyle}>
+        <div style={itemStyle}>
+          <span style={labelStyle}>Search Id:&nbsp;</span>
+          {searchItem.searchIdentifier.toString()}
+        </div>
+        <div style={itemStyle}>
+          <span style={labelStyle}>Date:&nbsp;</span>
+          {moment(searchItem.searchDate).format("MM/DD/YYYY")}
+        </div>
+        <div style={itemStyle}>
+          <span style={labelStyle}>Total Occurrences:&nbsp;</span>
+          {_(this.props.SearchResultViewState)
+            .filter(item => item.searchIdentifier === searchItem.searchIdentifier)
+            .reduce((s, o) => s + o.occurrences, 0)}
+        </div>
+        <div>
+          {this.props.SearchResultViewState
+            .filter(item => item.searchIdentifier === searchItem.searchIdentifier)
+            .map(item => (
+              <div style={{ width: "600px" }}>
+                <div>
+                  <i style={occurrenceStyle}>{item.searchText} ({item.occurrences})</i>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
     );
   }
 }

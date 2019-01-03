@@ -38,10 +38,10 @@ namespace App.Logic.Repo
             });
         }
 
-        public async Task<IEnumerable<SearchResultsView>> GetView()
+        public async Task<IEnumerable<SearchResultView>> GetView()
         {
             var searchItems = await this.searchManager.GetView();
-            return searchItems.Select(x => new SearchResultsView()
+            return searchItems.Select(x => new SearchResultView()
             {
                 ArticleIdentifier = x.ArticleIdentifier,
                 ArticleName = x.ArticleName,
@@ -66,9 +66,9 @@ namespace App.Logic.Repo
             {
                 SearchDate = x.Created,
                 SearchIdentifier = x.Identifier,
-                FullFirstName = x.FirstName,
-                FullLastName = x.LastName,
-                FullMiddleName = x.MiddleName,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                MiddleName = x.MiddleName,
                 TotalOccurrences = viewData.Where(i => i.SearchIdentifier == x.Identifier).Sum(i => i.Occurrences),
                 Results = articles
                 .Select(i => new SearchResultsModel()
@@ -89,55 +89,77 @@ namespace App.Logic.Repo
             });
         }
 
-        public async Task<IEnumerable<ResultModel>> Search(string firstName, string middleName, string lastName)
+        public async Task<SearchModel> Get(Guid identifier)
         {
-            string[] searchVariations = new string[]
+            var searchItem = await this.searchManager.Get(identifier);
+            return new SearchModel()
             {
-               $"{firstName.ToLower()} {lastName.ToLower()}",
-               $"{firstName.ToLower()} {middleName.Substring(0, 1).ToLower()} {lastName.ToLower()}",
-               $"{firstName.ToLower()} {middleName.Substring(0, 1).ToLower()}. {lastName.ToLower()}",
-               $"{firstName.ToLower()} {middleName.ToLower()} {lastName.ToLower()}",
+                Identifier = searchItem.Identifier,
+                FirstName = searchItem.FirstName,
+                LastName = searchItem.LastName,
+                MiddleName = searchItem.MiddleName,
             };
+        }
 
-            var articles = await this.articleManager.GetAll();
-            List<Entities.Search.Result> results = new List<Entities.Search.Result>();
+        public async Task<SearchModel> Search(string firstName, string lastName, string middleName)
+        {
+            List<string> searchVariations = new List<string>();
+            var searchModel = new SearchModel();
 
-            var searchIdentifier = await this.searchManager.Add(new Entities.Search.Search()
+            if (!string.IsNullOrWhiteSpace(firstName) && !string.IsNullOrWhiteSpace(firstName))
             {
-                FirstName = firstName,
-                LastName = lastName,
-                MiddleName = middleName,
-                CreatedBy = 1,
-            });
-
-            foreach (var article in articles)
-            {
-                var searchedItems = await this.searchManager.Search(searchVariations, articles.Select(x => x.Content.ToLower()).ToArray());
-                results.AddRange(searchedItems.Select(x => new Entities.Search.Result()
+                searchVariations.Add($"{firstName.ToLower()} {lastName.ToLower()}");
+                if (!string.IsNullOrWhiteSpace(middleName))
                 {
-                    SearchIdentifier = searchIdentifier,
-                    ArticleIdentifier = article.Identifier,
-                    SearchText = x.SearchText,
-                    Occurrences = x.Occurrences,
-                    Created = x.Created,
-                    CreatedBy = x.CreatedBy,
-                }));
-            }
+                    searchVariations.Add($"{firstName.ToLower()} {middleName.Substring(0, 1).ToLower()} {lastName.ToLower()}");
+                    searchVariations.Add($"{firstName.ToLower()} {middleName.Substring(0, 1).ToLower()}. {lastName.ToLower()}");
+                    searchVariations.Add($"{firstName.ToLower()} {middleName.ToLower()} {lastName.ToLower()}");
+                }
 
-            var returnedItems = new List<Logic.Models.ResultModel>();
-            foreach (var item in results)
-            {
-                var identifier = await this.resultsManager.Add(item);
-                returnedItems.Add(new Logic.Models.ResultModel()
+                var articles = await this.articleManager.GetAll();
+                List<Entities.Search.Result> results = new List<Entities.Search.Result>();
+                var searchIdentifier = await this.searchManager.Add(new Entities.Search.Search()
                 {
-                    Identifier = identifier,
-                    ArticleIdentifier = item.ArticleIdentifier,
-                    Occurrences = item.Occurrences,
-                    SearchText = item.SearchText,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    MiddleName = middleName,
+                    CreatedBy = 1,
                 });
+
+                foreach (var article in articles)
+                {
+                    var searchedItems = await this.searchManager.Search(searchVariations, articles.Select(x => x.Content.ToLower()).ToArray());
+                    results.AddRange(searchedItems.Select(x => new Entities.Search.Result()
+                    {
+                        SearchIdentifier = searchIdentifier,
+                        ArticleIdentifier = article.Identifier,
+                        SearchText = x.SearchText,
+                        Occurrences = x.Occurrences,
+                        Created = x.Created,
+                        CreatedBy = x.CreatedBy,
+                    }));
+                }
+
+                var returnedItems = new List<Logic.Models.ResultModel>();
+                foreach (var item in results)
+                {
+                    returnedItems.Add(new Logic.Models.ResultModel()
+                    {
+                        SearchIdentifier = item.SearchIdentifier,
+                        ArticleIdentifier = item.ArticleIdentifier,
+                        Occurrences = item.Occurrences,
+                        SearchText = item.SearchText,
+                    });
+                }
+
+                searchModel.Identifier = searchIdentifier;
+                searchModel.FirstName = firstName;
+                searchModel.LastName = lastName;
+                searchModel.MiddleName = middleName;
+                searchModel.Results = returnedItems;
             }
 
-            return returnedItems;
+            return searchModel;
         }
     }
 }

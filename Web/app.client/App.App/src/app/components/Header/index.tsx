@@ -54,6 +54,8 @@ export class Header extends React.Component<Header.Props> {
         </div>
         <input type="checkbox" id="nav-check" />
         <div className="nav-links">
+          {this.props.isAuthenticated && renderLink("Home", "/")}
+          {this.props.isAuthenticated && renderLink("Search", "/Search")}
           {this.props.isAuthenticated && renderLink("History", "/History")}
           {!this.props.isAuthenticated && renderLink("Login", "/Login")}
           {this.props.isAuthenticated && logoutLink()}

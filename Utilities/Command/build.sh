@@ -2,14 +2,14 @@
 appDir=$1
  
 function buildApi() {
-    cd ../../Web/Api/GildedRose.Api
+    cd ../../Web/Api
     start cmd.exe //K dotnet build -c $1 -v normal
 }
 
 function buildMembershipDacpac() {
     msBuild=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe
     #appDir=$(cygpath -aw ./../../)
-    prjPath="$(cygpath -aw $appDir/Database/Membership/GildedRose.Membership.sqlproj)"
+    prjPath="$(cygpath -aw $appDir/Database/Membership/App.Membership.sqlproj)"
     echo "Building Membership database"
     start cmd.exe //K "$msBuild" $prjPath //t:Build //p:VisualStudioVersion=15.0 //p:Configuration=Debug //v:detailed
 }
@@ -17,7 +17,7 @@ function buildMembershipDacpac() {
 function buildPlatformDacpac() {
     msBuild=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe
     #appDir=$(cygpath -aw ./../../)    
-    prjPath="$(cygpath -aw $appDir/Database/Platform/GildedRose.Platform.sqlproj)"
+    prjPath="$(cygpath -aw $appDir/Database/Platform/App.Platform.sqlproj)"
     echo "Building Platform database"
     start cmd.exe //K "$msBuild" $prjPath //t:Build //p:VisualStudioVersion=15.0 //p:Configuration=Debug //v:detailed
 }

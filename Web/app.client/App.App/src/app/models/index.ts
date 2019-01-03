@@ -6,4 +6,3 @@ export * from "models/ResultModel";
 export * from "models/SourceTypeModel";
 export * from "app/models/SearchResultViewModel";
 export * from "models/SearchModel";
-export * from "models/SearchAggregationModel";
