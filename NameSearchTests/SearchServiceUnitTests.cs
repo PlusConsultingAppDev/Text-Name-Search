@@ -10,21 +10,15 @@ namespace NameSearchTests
     [TestFixture]
     public class SearchServiceUnitTests
     {
-        private ContentManagementService _cmSvc;
         private NameSearchService _nameSearchService;
-        private string _contentToSearch;
+        private const string UrlToFetch = "https://github.com/PlusConsultingAppDev/Text-Name-Search";
 
         [SetUp]
-        public async Task Setup()
+        public void Setup()
         {
-            // arrange for most of the tests
-            _cmSvc = new ContentManagementService();
-            // more arranging
+            // arrange for the coommonality of the tests
             var resultsList = new List<KeyValuePair<string, int>>();
             _nameSearchService = new NameSearchService();
-
-            // get our searchable content string
-            _contentToSearch = await _cmSvc.FetchPageAsync("https://github.com/PlusConsultingAppDev/Text-Name-Search");
         }
 
 
@@ -33,13 +27,13 @@ namespace NameSearchTests
         [TestCase("Connor G. Smith", ExpectedResult = 0)]
         [TestCase("Connor Smith", ExpectedResult = 2)]
         [TestCase("Connor Gary Smith total", ExpectedResult = 4)]
-        public int TestNameSearchForSmith(string name)
+        public async Task<int> TestNameSearchForSmith(string name)
         {
             // add our test names
             _nameSearchService.AddSearchName("Connor Gary Smith");
 
             // find results in the content to search
-            var listOfNamesFound = _nameSearchService.SearchResults(_contentToSearch);
+            var listOfNamesFound = await _nameSearchService.SearchResults(UrlToFetch);
 
             // Assert the counts are correct.
             // Each one should be one more than indicated on the exercise's because the description contains
@@ -52,13 +46,13 @@ namespace NameSearchTests
         [TestCase("Seth D. Greenly", ExpectedResult = 1)]
         [TestCase("Seth Greenly", ExpectedResult = 0)]
         [TestCase("Seth David Greenly total", ExpectedResult = 4)]
-        public int TestNameSearchForGreenly(string name)
+        public async Task<int> TestNameSearchForGreenly(string name)
         {
             // add our test names
             _nameSearchService.AddSearchName("Seth David Greenly");
 
             // find results in the content to search
-            var listOfNamesFound = _nameSearchService.SearchResults(_contentToSearch);
+            var listOfNamesFound = await _nameSearchService.SearchResults(UrlToFetch);
 
             // Assert the counts are correct.
             // Each one should be one more than indicated on the exercise's because the description contains
@@ -71,13 +65,13 @@ namespace NameSearchTests
         [TestCase("David W. Black", ExpectedResult = 1)]
         [TestCase("David Black", ExpectedResult = 2)]
         [TestCase("David Warren Black total", ExpectedResult = 5)]
-        public int TestNameSearchForBlack(string name)
+        public async Task<int> TestNameSearchForBlack(string name)
         {
             // add our test names
             _nameSearchService.AddSearchName("David Warren Black");
 
             // find results in the content to search
-            var listOfNamesFound = _nameSearchService.SearchResults(_contentToSearch);
+            var listOfNamesFound = await _nameSearchService.SearchResults(UrlToFetch);
 
             // Assert the counts are correct.
             // Each one should be one more than indicated on the exercise's because the description contains
