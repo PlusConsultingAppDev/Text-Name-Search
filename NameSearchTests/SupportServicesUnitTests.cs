@@ -42,10 +42,10 @@ namespace NameSearchTests
 
 
             // Act: fetch the text from the website
-            var context = _svc.FetchPage("https://github.com/PlusConsultingAppDev/Text-Name-Search").ToString().ToLower();
+            var content = _svc.FetchPage("https://github.com/PlusConsultingAppDev/Text-Name-Search").ToString().ToLower();
 
             // assert that our text is in the fetched string
-            Assert.IsTrue(context.Contains(stringToFind.ToLower()));
+            Assert.IsTrue(content.Contains(stringToFind.ToLower()));
         }
 
         [Test]
