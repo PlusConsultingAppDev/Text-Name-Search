@@ -10,7 +10,6 @@ namespace Text_Name_Search.Pages
     public class IndexModel : PageModel
     {
         private readonly TextNameSearchContext _db;
-        private readonly ContentManagementService _contentManagementService;
         private readonly NameSearchService _nameSearchService;
 
         [BindProperty]
@@ -19,19 +18,19 @@ namespace Text_Name_Search.Pages
         [BindProperty]
         public IList<KeyValuePair<string, int>> NamesFound { get; set; }
 
+        //public async void OnGet()
         public void OnGet()
         {
             // cheap trickery to get the page bind logic to work on initial load
             // since our page model isn't populated yet
             if (NamesFound is null)
-                 NamesFound = _nameSearchService.SearchResults("");
+                 NamesFound = new List<KeyValuePair<string, int>>();
         }
 
         // the ctor - the arguments get passed in via the magic of dependency injection built into ASP.NET Core
-        public IndexModel(TextNameSearchContext db, ContentManagementService contentManagementService, NameSearchService nameSearchService)
+        public IndexModel(TextNameSearchContext db, NameSearchService nameSearchService)
         {
             _db = db;
-            _contentManagementService = contentManagementService;
             _nameSearchService = nameSearchService;
         }
 
@@ -43,9 +42,6 @@ namespace Text_Name_Search.Pages
                 return Page();
             }
 
-            // get our URL asynchronously
-            var content = await _contentManagementService.FetchPageAsync(this.UrlToSearch);
-            
             // grab the search items from the database
             var searchItems = _db.SearchItem;
 
@@ -56,7 +52,7 @@ namespace Text_Name_Search.Pages
             }
 
             // assign to search results to our property fso the page can bind to the values
-            NamesFound = _nameSearchService.SearchResults(content);
+            NamesFound = await _nameSearchService.SearchResults(UrlToSearch);
 
             return Page();
         }
