@@ -8,4 +8,8 @@
     <Compile Remove="StringExtension.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SupportServices\SupportServices.csproj" />
+  </ItemGroup>
+
 </Project>
