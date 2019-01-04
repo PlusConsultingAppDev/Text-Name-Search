@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PlusConsulting.NameSearch.WpfApp.Views.SearchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModels="clr-namespace:PlusConsulting.NameSearch.WpfApp.ViewModels"
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance viewModels:SearchViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Specify Text To Search" Style="{StaticResource TitleText}"/>
+
+        <TextBox Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+
+        <Button Grid.Row="1" Grid.Column="3" Height="25" Width="80" Content="Clear" Command="{Binding ClearCommand}"/>
+
+    </Grid>
+</UserControl>
