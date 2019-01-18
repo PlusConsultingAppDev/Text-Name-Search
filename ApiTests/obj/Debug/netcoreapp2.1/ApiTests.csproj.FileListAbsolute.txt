@@ -1,0 +1,14 @@
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\ApiTests.deps.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\ApiTests.runtimeconfig.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\ApiTests.runtimeconfig.dev.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\ApiTests.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\bin\Debug\netcoreapp2.1\ApiTests.pdb
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.csprojAssemblyReference.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.csproj.CoreCompileInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.AssemblyInfoInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.AssemblyInfo.cs
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\ApiTests\obj\Debug\netcoreapp2.1\ApiTests.pdb

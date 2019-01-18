@@ -1,0 +1,14 @@
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\bin\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.deps.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\bin\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.runtimeconfig.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\bin\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.runtimeconfig.dev.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\bin\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\bin\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.pdb
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.csprojAssemblyReference.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.csproj.CoreCompileInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.RazorAssemblyInfo.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.RazorAssemblyInfo.cs
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.AssemblyInfoInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.AssemblyInfo.cs
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.RazorTargetAssemblyInfo.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\EmployeeSearchAPI\obj\Debug\netcoreapp2.1\EmployeeSearchConfigAPI.pdb

@@ -1,0 +1,35 @@
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.deps.json
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.runtimeconfig.json
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.runtimeconfig.dev.json
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.dll
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csprojAssemblyReference.cache
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csproj.CoreCompileInputs.cache
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorAssemblyInfo.cache
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorAssemblyInfo.cs
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.AssemblyInfoInputs.cache
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.AssemblyInfo.cs
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorTargetAssemblyInfo.cache
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.pdb
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.dll
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.pdb
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\Nest.dll
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\bin\Debug\netcoreapp2.1\Nest.xml
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csproj.CopyComplete
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.Resource.resources
+C:\Users\goran\Documents\Visual Studio 2017\Projects\WebApplication1\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csproj.GenerateResource.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.deps.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.runtimeconfig.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.runtimeconfig.dev.json
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\bin\Debug\netcoreapp2.1\SearchAPI.pdb
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csprojAssemblyReference.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.Resource.resources
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csproj.GenerateResource.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.csproj.CoreCompileInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorAssemblyInfo.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorAssemblyInfo.cs
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.AssemblyInfoInputs.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.AssemblyInfo.cs
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.RazorTargetAssemblyInfo.cache
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.dll
+C:\Goran\Projects\ASP.NETCore\Text-Name-Search\SearchAPI\obj\Debug\netcoreapp2.1\SearchAPI.pdb
