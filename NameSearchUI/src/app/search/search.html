@@ -1,0 +1,16 @@
+<ng-template>
+    <div>
+        <label [innerHTML]="First Name"></label>
+        <input type="text" required=true [(ngModel)]="FirstName" [placeholder]="First Name" colSpan="col-md-2" />
+        <label [innerHTML]="Middle Initial"></label>
+        <input type="text" required=true [(ngModel)]="MiddleInitial" [placeholder]="Middle Initial" colSpan="col-md-2" />
+        <label [innerHTML]="First Name"></label>
+        <input type="text" required=true [(ngModel)]="LastName" [placeholder]="Last Name" colSpan="col-md-2" />
+    </div>
+    <div class="col-xs-6 col-sm-6 col-lg-2 bottom-gutter pull-right" *ngIf="item.check === true && loadGrid">
+		<button type="button" class="btn btn-primary" (click)="SearchNames()" [disabled]="!cancelVisible" [innerHTML]="Search"></button>
+	</div>
+</ng-template>
+<ng-template [ngIf]="hasResults">
+    <is-manage #manage="isManage" [manageService]="service"></is-manage>
+</ng-template>

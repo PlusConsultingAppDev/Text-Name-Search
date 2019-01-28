@@ -1,0 +1,30 @@
+import { OnInit, AfterViewInit, OnChanges, SimpleChanges, ElementRef } from '@angular/core';
+import { ManageComponent } from './manage.component';
+import { ActionItem } from './models';
+export declare class ManageToolbarComponent implements OnInit, AfterViewInit, OnChanges {
+    private _parent;
+    actionItems: ActionItem[];
+    id: string;
+    addRoute: string;
+    gridAction: boolean;
+    visibleColumns: string[];
+    columns: any[];
+    title: string;
+    filter: ElementRef;
+    isMobile: boolean;
+    hideFilter: boolean;
+    hasActions: boolean;
+    private _el;
+    constructor(_parent: ManageComponent);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    openDual(): void;
+    toggleSearch(): void;
+    addRow(): void;
+    csvExport(): void;
+    clearFilter(): void;
+    sizeToFit(): void;
+    setColumnVisibility(e: MouseEvent, columnHeader: any): void;
+    onFilterChanged(e: Event): void;
+}

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "plugins": [
+            {
+                "name": "@angular/language-service"
+            }
+        ],
+        "removeComments": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true
+    }
+}
