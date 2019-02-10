@@ -12,36 +12,30 @@ namespace WebApplication1.Models
 {
     public class SearchClass
     {
-       // [Required(ErrorMessage = "A first name is required")]
-       // [DisplayFormat(ConvertEmptyStringToNull = false)]
-       // [StringLength(160, MinimumLength = 1)]
+
         public string FirstName { get; set; }
 
-       // [Required(ErrorMessage = "A last name is required")]
-       // [DisplayFormat(ConvertEmptyStringToNull = false)]
-       // [StringLength(160, MinimumLength = 1)]
         public string LastName { get; set; }
 
-       // [Required(ErrorMessage = "A middle name is required")]
-       // [DisplayFormat(ConvertEmptyStringToNull = false)]
-       // [StringLength(160, MinimumLength = 1)]
         public string MiddleName { get; set; }
 
         public string MiddleInitial
         {
             get
-            { if (MiddleName!=null && MiddleName != "")
+            {
+                if (MiddleName != null && MiddleName != "")
                 {
                     return MiddleName.Substring(0, 1);
                 }
-            else return null;
+                else return null;
             }
             set
             {
             }
         }
 
-        public string FirstAndLastName {
+        public string FirstAndLastName
+        {
             get
             {
                 return FirstName + " " + LastName;
@@ -53,7 +47,8 @@ namespace WebApplication1.Models
         }
         public int FirstAndLastAmount { get; set; }
 
-        public string MiddleInitialLastName {
+        public string MiddleInitialLastName
+        {
             get
             {
                 return FirstName + " " + MiddleInitial + " " + LastName;
@@ -66,7 +61,8 @@ namespace WebApplication1.Models
         }
         public int MiddleInitialLastNameAmount { get; set; }
 
-        public string MidileInitialDotLastName {
+        public string MidileInitialDotLastName
+        {
             get
             {
                 return FirstName + " " + MiddleInitial + ". " + LastName;
@@ -79,7 +75,8 @@ namespace WebApplication1.Models
         }
         public int MiddleInitalDotLastNameAmount { get; set; }
 
-        public string FullName {
+        public string FullName
+        {
             get
             {
                 return FirstName + " " + MiddleName + " " + LastName;
@@ -91,7 +88,7 @@ namespace WebApplication1.Models
             }
         }
         public int FullNameAmount { get; set; }
-      
-        
+
+
     }
 }

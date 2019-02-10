@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\TNS\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\workspace\\Text-Name-Search\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\workspace\\TNS\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "D:\\workspace\\Text-Name-Search\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\whatn_000\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\TNS\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "D:\\workspace\\Text-Name-Search\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
