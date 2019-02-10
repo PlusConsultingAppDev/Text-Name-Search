@@ -1,0 +1,36 @@
+﻿@model SearchClass
+@{
+    ViewData["Title"] = "SearchResults";
+}
+
+<h2>SearchResults</h2>
+
+@{ <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col" style="color:black">Name</th>
+                <th scope="col" style="color:black">Amount Found</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.FullName</td>
+                <td>@Model.FullNameAmount.ToString()</td>
+            </tr>
+            <tr>
+                <td>@Model.FirstAndLastName</td>
+                <td>@Model.FirstAndLastAmount.ToString()</td>
+            </tr>
+            <tr>
+                <td>@Model.MiddleInitialLastName</td>
+                <td>@Model.MiddleInitialLastNameAmount.ToString()</td>
+            </tr>
+            <tr>
+                <td>@Model.MidileInitialDotLastName</td>
+                <td>@Model.MiddleInitalDotLastNameAmount.ToString()</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
