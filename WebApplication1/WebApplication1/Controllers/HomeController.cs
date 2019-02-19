@@ -12,7 +12,14 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+
+
         INameSearcher ASearch = new NameSearcher();
+        public SearchClass userEntry = new SearchClass();
+
+
+
+
         public IActionResult Index()
         {
             return View();
@@ -40,15 +47,33 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public IActionResult NameSearch()
         {
-            SearchClass userEntry = new SearchClass();
+            if (userEntry.SavedNames == null)
+            {
+                userEntry.SavedNames = new List<SearchClass>();
+            }
+            return View(userEntry);
+        }
+
+        [HttpPost]
+        public IActionResult AddToList(SearchClass userEntry)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("NameSearch", userEntry);
+            }
+
+            userEntry.SavedNames.Add(userEntry);
             return View(userEntry);
         }
 
         [HttpPost]
         public IActionResult SearchResults(SearchClass userEntry)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("NameSearch", userEntry);
+            }
 
-         
             userEntry = ASearch.DoSearch(userEntry);
             return View(userEntry);
         }

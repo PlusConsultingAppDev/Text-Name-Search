@@ -12,11 +12,21 @@ namespace WebApplication1.Models
 {
     public class SearchClass
     {
-
+        [Display(Name = "First Name")]
+        [Required(ErrorMessage = "*Required")]
+        [MaxLength(20, ErrorMessage = "The limit is {1} characters")]
         public string FirstName { get; set; }
 
+
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "*Required")]
+        [MaxLength(20, ErrorMessage = "The limit is {1} characters")]
         public string LastName { get; set; }
 
+
+        [Display(Name = "Middle Name")]
+        [Required(ErrorMessage = "*Required")]
+        [MaxLength(20, ErrorMessage = "The limit is {1} characters")]
         public string MiddleName { get; set; }
 
         public string MiddleInitial
@@ -88,6 +98,9 @@ namespace WebApplication1.Models
             }
         }
         public int FullNameAmount { get; set; }
+       
+        public List<SearchClass> SavedNames { get; set; }
+
 
 
     }

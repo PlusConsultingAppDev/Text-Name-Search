@@ -1,38 +1,41 @@
-﻿@model SearchClass
+﻿@using WebApplication1.Models;
+
+@model SearchClass
+
 @{
     ViewData["Title"] = "NameSearch";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
 
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<form asp-controller="Home" asp-action="SearchResults" method="post">
-    <div class="labels">
+<form asp-controller="Home" asp-action="SearchResults"  method="post">
+    <div class="form-group">
         <label asp-for="FirstName">First Name:</label>
+        <input type="text" asp-for="FirstName" class="form-control" placeholder="enter first name" />
+        <span asp-validation-for="FirstName"></span>
     </div>
-    <div class="fields">
-        <input type="text" asp-for="FirstName" />
-    </div>
-    <div class="labels">
+    <div class="form-group">
         <label asp-for="MiddleName">Middle Name:</label>
+        <input type="text" asp-for="MiddleName" class="form-control" placeholder="enter middle name" />
+        <span asp-validation-for="MiddleName"></span>
     </div>
-    <div class="fields">
-        <input type="text" asp-for="MiddleName" />
-    </div>
-    <div class="labels">
+
+    <div class="form-group">
         <label asp-for="LastName">Last Name:</label>
-    </div>
-    <div class="fields">
-        <input type="text" asp-for="LastName" />
+        <input type="text" asp-for="LastName" class="form-control" placeholder="enter last name" />
+        <span asp-validation-for="LastName"></span>
     </div>
 
 
 
-    <div class="labels">
-        <input type="submit" value="Search Name" />
-    </div>
+    <button type="submit" class="btn btn-primary">Search This Name</button>
 </form>
+@if (Model.SavedNames != null)
+{
+<partial name="_ListOfNames" model="@Model.SavedNames" />
+}
