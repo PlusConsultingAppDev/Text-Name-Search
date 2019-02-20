@@ -67,3 +67,4 @@ D:\workspace\Text-Name-Search\WebApplication1\WebApplication1\obj\Debug\netcorea
 D:\workspace\Text-Name-Search\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
 D:\workspace\Text-Name-Search\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CopyComplete
 D:\workspace\Text-Name-Search\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\_ListOfNames.g.cshtml.cs
+D:\workspace\Text-Name-Search\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\SearchAgain.g.cshtml.cs

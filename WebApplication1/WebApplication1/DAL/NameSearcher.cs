@@ -8,9 +8,16 @@ using WebApplication1.Models;
 
 namespace WebApplication1.DAL
 {
-    public class NameSearcher : INameSearcher
+    public class NameSearcher 
     {
+
+
+
+
+
+
         public SearchClass DoSearch (SearchClass userEntry)
+           ////Searches the text file for the names
         {
             using (StreamReader sr = new StreamReader(@"D:\workspace\TNS\WebApplication1\WebApplication1\Text.txt"))
             {

@@ -99,7 +99,7 @@ namespace WebApplication1.Models
         }
         public int FullNameAmount { get; set; }
        
-        public List<SearchClass> SavedNames { get; set; }
+        public   List<SearchClass> SavedNames { get; set; }
 
 
 

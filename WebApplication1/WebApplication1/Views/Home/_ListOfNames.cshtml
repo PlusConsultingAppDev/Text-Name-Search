@@ -4,26 +4,36 @@
     ViewData["Title"] = "_ListOfNames";
 }*@
 
-<h2>_ListOfNames</h2>
+<h2>Name List</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
-            <th></th>
+            <th scope="col" style="color:black">Name</th>
+       
+
         </tr>
     </thead>
     <tbody>
-@foreach (SearchClass item in Model) {
+        @foreach (SearchClass item in Model)
+        {
         <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+       
+            <td>@item.FullName</td>
+
         </tr>
-}
+        }
     </tbody>
 </table>
+
+<form asp-controller="Home" asp-action="SearchResults" method="get">
+
+
+    <button type="submit" class="btn btn-primary">Search List</button>
+</form>
+<form asp-controller="Home" asp-action="ClearList" method="post">
+
+
+    <button type="submit" class="btn btn-primary">Clear List</button>
+</form>

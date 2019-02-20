@@ -13,7 +13,7 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<form asp-controller="Home" asp-action="AddToList"  method="post">
+<form asp-controller="Home" asp-action="AddToList" method="post">
     <div class="form-group">
         <label asp-for="FirstName">First Name:</label>
         <input type="text" asp-for="FirstName" class="form-control" placeholder="enter first name" />
@@ -31,16 +31,11 @@
         <span asp-validation-for="LastName"></span>
     </div>
 
-    <div class="form-group">
-        <input asp-for="SavedNames" type ="hidden" />
-    </div>
-
-
     <button type="submit" class="btn btn-primary">Add Name</button>
 </form>
 
 
 @if (Model.SavedNames != null && Model.SavedNames.Count != 0)
-{
-<partial name="_ListOfNames" model="@Model.SavedNames" />
-}
+    {
+        <partial name="_ListOfNames" model="@Model.SavedNames" />
+    }

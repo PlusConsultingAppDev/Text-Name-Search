@@ -7,21 +7,31 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using WebApplication1.Controllers;
 using WebApplication1.DAL;
+using Microsoft.AspNetCore.Http;
+
+using System.Data;
+using System.Configuration;
+using System.Xml.Linq;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApplication1.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller  
     {
 
 
-        INameSearcher ASearch = new NameSearcher();
-        public SearchClass userEntry = new SearchClass();
+       public NameSearcher ASearch = new NameSearcher();
 
 
+
+
+
+        SavedNamesList dal = new SavedNamesList();
 
 
         public IActionResult Index()
         {
+
             return View();
         }
 
@@ -45,37 +55,81 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
+        public IActionResult SearchAgain(SearchClass userEntry)
+        {
+            userEntry.SavedNames = dal.getNamesList(userEntry);
+
+            return View(userEntry);
+        }
+
+        /// <summary>
+        /// Creates a searchclass and goes to the name entry view
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public IActionResult NameSearch()
         {
-            if (userEntry.SavedNames == null)
-            {
-                userEntry.SavedNames = new List<SearchClass>();
-            }
+            SearchClass userEntry = new SearchClass();
+
+      
+                //userEntry.SavedNames = new List<SearchClass>();
+            
+
             return View(userEntry);
         }
 
+
+        /// <summary>
+        /// takes in the name, Verifies required with validation from the class
+        /// Adds to the database
+        /// </summary>
+        /// <param name="userEntryAddedToList"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult AddToList(SearchClass userEntry)
+        public IActionResult AddToList(SearchClass userEntryAddedToList)
         {
             if (!ModelState.IsValid)
             {
-                return View("NameSearch", userEntry);
+                return View("SearchAgain", userEntryAddedToList);
+            }       
+            if (userEntryAddedToList.SavedNames == null)
+            {
+                userEntryAddedToList.SavedNames = new List<SearchClass>();
             }
 
-            userEntry.SavedNames.Add(userEntry);
-            return View(userEntry);
+            
+            userEntryAddedToList.SavedNames =  dal.AddNamesList(userEntryAddedToList);
+
+
+
+            return RedirectToAction("SearchAgain", userEntryAddedToList);
         }
 
-        [HttpPost]
-        public IActionResult SearchResults(SearchClass userEntry)
+        /// <summary>
+        /// Pulls the data from the database, add to the searchclass object list
+        /// add the amounts to a new searchclass list that then adds it in to the returned object.
+        /// </summary>
+        /// <param name="userEntrySearched"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult SearchResults(SearchClass userEntrySearched)
         {
-            if (!ModelState.IsValid)
+      
+                userEntrySearched.SavedNames = dal.getNamesList(userEntrySearched);
+           List<SearchClass> userEntrySearchedComplete = new List<SearchClass>();
+            foreach (SearchClass item in userEntrySearched.SavedNames)
             {
-                return View("NameSearch", userEntry);
+                userEntrySearchedComplete.Add(ASearch.DoSearch(item));
             }
+            userEntrySearched.SavedNames = userEntrySearchedComplete;
+            return View(userEntrySearched);
+        }
+        [HttpPost]
+        public IActionResult ClearList()
+        {
+            dal.ClearNamesList();
 
-            userEntry = ASearch.DoSearch(userEntry);
-            return View(userEntry);
+            return RedirectToAction("NameSearch");
         }
 
 
