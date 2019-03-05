@@ -1,0 +1,31 @@
+﻿/* ========================================================
+   Grids
+   ======================================================== */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "left left left"
+    "middle middle middle" 
+    "right right right";
+
+  padding: 0 10px;
+  margin-bottom: 100px;
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-areas: "left middle right";
+  }
+}
+
+.grid-item-left {
+  grid-area: left;
+}
+
+.grid-item-middle {
+  grid-area: middle;
+}
+
+.grid-item-right {
+  grid-area: right;
+}

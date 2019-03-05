@@ -1,0 +1,23 @@
+﻿/* ========================================================
+   Buttons
+   ======================================================== */
+
+.submit-button {
+  display: block;
+  padding: 10px 80px;
+  margin: 0 auto;
+  color: #ff7c6e;
+  background: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ff7c6e;
+  border-radius: 4px;
+  transition: 300ms ease;
+  transition-property: background, border;
+  box-sizing: border-box;
+
+  &:hover {
+    background: #ffd6d2;
+    cursor: pointer;
+  }
+}
