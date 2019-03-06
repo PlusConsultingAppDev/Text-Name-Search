@@ -1,0 +1,73 @@
+﻿/* ========================================================
+   Forms
+   ======================================================== */
+
+.input-form {
+  margin: 50px 0;
+  text-align: center;
+
+  > .input {
+    height: 60vh;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ff7c6e;
+    border-radius: 4px;
+    transition: box-shadow 300ms ease-out;
+    outline: none;
+    resize: none;
+  }
+
+  > .submit {
+    margin-top: 20px;
+    width: 250px;
+  }
+}
+
+.user-form {
+  margin-top: 50px;
+
+  > .dropdown {
+    display: block;
+    height: 40px;
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ff7c6e;
+    border-radius: 4px;
+    transition: box-shadow 300ms ease-out;
+    outline: none;
+    resize: none;
+  }
+
+  > .field {
+    display: block;
+    width: 300px;
+    padding: 14px 24px;
+    margin: 20px auto;
+    border: 1px solid #ff7c6e;
+    border-radius: 4px;
+    transition: box-shadow 300ms ease-out;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+
+    &:first-child {
+      margin-top: 10px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px #ffd6d2;
+    }
+  }
+
+  > .submit {
+    width: 300px;
+  }
+
+  > .error {
+    display: none;
+    margin: 20px 0;
+    color: #dc3545;
+    font-size: 18px;
+    text-align: center;
+  }
+}
