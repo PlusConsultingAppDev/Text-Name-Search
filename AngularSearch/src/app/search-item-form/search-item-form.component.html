@@ -1,0 +1,14 @@
+<div>
+  <form [formGroup]="searchItemForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput formControlName="firstName" placeholder="First Name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="middleName" placeholder="Middle Name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="lastName" placeholder="Last Name" required>
+    </mat-form-field>
+    <button type="submit" mat-button color="primary" [disabled]="searchItemForm.invalid">Submit</button>
+  </form>
+</div>
