@@ -1,3 +1,47 @@
+# Text Name Search
+
+By [Joshua Zinkovsky](mailto:joshua.zky@gmail.com)
+
+## If Build Errors
+
+If there are errors building the solution, please download this tested and working zip file: https://bit.ly/2Vye3xU
+
+## Instructions
+
+1. Navigate to [repo](https://github.com/Josh961/Text-Name-Search)
+2. Clone locally using
+   `git clone https://github.com/Josh961/Text-Name-Search.git`
+3. Open `Text-Name-Search.sln`
+4. Double click `Default.aspx` under directory `Text-Name-Search`
+5. Click play in Visual Studio
+6. Application should open in default browser
+7. Enjoy!
+
+## Discussion
+
+I used the following technologies: HTML, Sass, JavaScript, and ASP.NET.
+Vanilla Javascript was used to create the front end, employing the use 
+of AJAX requests to communicate with the backend asynchronously. Server
+side results displayed within update panel to inhibit a full page refresh.
+
+## Requirements
+
+#### Front End
+
+Users must enter a first, middle, and last name in order to add a new employee. Users
+are saved in a list where they can be deleted if need be. Once user initiates a search, a table
+will be displayed with the results based on the current list of employees. Results are grouped by
+stored names, displaying the different variations found and total number of occurences.
+
+#### Back End
+
+Back end finds names that match the given list of employees. Application ignores any casing.
+Required variations are found, with the ability to add more in the future. 
+
+#### Tests
+
+Run tests within visual studio using shortcut `ctrl+r a`
+
 # Plus Consulting Code Test: Name Search
 
 ## Submission

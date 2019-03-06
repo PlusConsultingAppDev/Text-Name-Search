@@ -1,0 +1,21 @@
+﻿/* ========================================================
+   Variables
+   ======================================================== */
+
+$font-stack: Segoe UI, Arial, Helvetica, sans-serif;
+$font-stack-bold: Monteserrat, Arial, Helvetica, sans-serif;
+
+/* ========================================================
+   Sitewide Tag Styling
+   ======================================================== */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+  font-family: $font-stack;
+}
+
+h1 {
+  font-family: $font-stack-bold;
+}

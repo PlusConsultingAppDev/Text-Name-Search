@@ -1,0 +1,26 @@
+﻿/* ========================================================
+   Tables
+   ======================================================== */
+
+.results-table {
+  width: 100%;
+  user-select: none;
+
+  th {
+    padding: 20px;
+  }
+
+  tr {
+    margin-bottom: 5px;
+    background: none;
+    transition: 200ms ease;
+
+    &:not(:first-child):hover {
+      background: #ffd6d2;
+    }
+  }
+
+  td {
+    padding: 15px 10px;
+  }
+}
