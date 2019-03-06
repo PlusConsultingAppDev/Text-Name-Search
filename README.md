@@ -1,7 +1,13 @@
 # Plus Consulting Code Test: Name Search
 
-## Submission
-_**Fork this Repo, complete your code and submit a Pull Request to complete your submission.**_
+# 1. Installation and Setup
+Clone repo.
+While in the project directory run:
+```bash
+npm install
+ng serve
+```
+
 
 ## Overview
 For the purposes of this test, you can use any .NET or Client-Side architecture(s) of your choice to complete the requirements outlined below.

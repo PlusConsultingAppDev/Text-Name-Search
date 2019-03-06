@@ -1,0 +1,20 @@
+
+<form #searchForm="ngForm" (ngSubmit)="onSubmit()" class="search-form">
+
+  <mat-form-field class="full-width">
+    <textarea matInput placeholder="News Article Text" required [(ngModel)]="newsArticle" name="newsArticle" #name="ngModel"></textarea>
+  </mat-form-field>
+
+  <button type="submit" mat-button color="primary" [disabled]="!searchForm.form.valid">Search</button>
+</form>
+
+<div *ngIf="results">
+  <mat-divider></mat-divider>
+  <mat-list>
+      <h1 mat-subheader>Results</h1>
+    <mat-list-item *ngFor="let result of results">
+      {{result.name.firstName}} {{result.name.middleName}} {{result.name.lastName}} ({{result.count}})
+    </mat-list-item>
+  </mat-list>
+
+</div>
