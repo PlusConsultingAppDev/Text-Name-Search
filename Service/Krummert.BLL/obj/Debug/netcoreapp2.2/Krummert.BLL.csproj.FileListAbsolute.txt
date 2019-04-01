@@ -1,0 +1,12 @@
+C:\Code\Krummert\Krummert\Krummert.BLL\bin\Debug\netcoreapp2.2\Krummert.BLL.deps.json
+C:\Code\Krummert\Krummert\Krummert.BLL\bin\Debug\netcoreapp2.2\Krummert.BLL.dll
+C:\Code\Krummert\Krummert\Krummert.BLL\bin\Debug\netcoreapp2.2\Krummert.BLL.pdb
+C:\Code\Krummert\Krummert\Krummert.BLL\bin\Debug\netcoreapp2.2\Krummert.DLL.dll
+C:\Code\Krummert\Krummert\Krummert.BLL\bin\Debug\netcoreapp2.2\Krummert.DLL.pdb
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.csprojAssemblyReference.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.csproj.CoreCompileInputs.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.AssemblyInfoInputs.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.AssemblyInfo.cs
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.csproj.CopyComplete
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.dll
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.2\Krummert.BLL.pdb

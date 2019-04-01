@@ -1,0 +1,9 @@
+C:\Code\Krummert\Krummert\Krummert.DLL\bin\Debug\netstandard2.0\Krummert.DLL.deps.json
+C:\Code\Krummert\Krummert\Krummert.DLL\bin\Debug\netstandard2.0\Krummert.DLL.dll
+C:\Code\Krummert\Krummert\Krummert.DLL\bin\Debug\netstandard2.0\Krummert.DLL.pdb
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.csproj.CoreCompileInputs.cache
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.AssemblyInfoInputs.cache
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.AssemblyInfo.cs
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.dll
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.pdb
+C:\Code\Krummert\Krummert\Krummert.DLL\obj\Debug\netstandard2.0\Krummert.DLL.csprojAssemblyReference.cache
