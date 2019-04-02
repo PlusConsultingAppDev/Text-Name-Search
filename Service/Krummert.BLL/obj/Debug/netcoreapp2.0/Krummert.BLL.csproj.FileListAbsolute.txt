@@ -1,0 +1,4 @@
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.0\Krummert.BLL.csprojAssemblyReference.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.0\Krummert.BLL.csproj.CoreCompileInputs.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.0\Krummert.BLL.AssemblyInfoInputs.cache
+C:\Code\Krummert\Krummert\Krummert.BLL\obj\Debug\netcoreapp2.0\Krummert.BLL.AssemblyInfo.cs

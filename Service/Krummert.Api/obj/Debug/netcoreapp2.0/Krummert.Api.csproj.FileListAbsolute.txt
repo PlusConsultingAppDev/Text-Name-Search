@@ -1,0 +1,13 @@
+C:\Code\Krummert\Krummert\Krummert.Api\obj\Debug\netcoreapp2.0\Krummert.Api.csprojAssemblyReference.cache
+C:\Code\Krummert\Krummert\Krummert.Api\obj\Debug\netcoreapp2.0\Krummert.Api.csproj.CoreCompileInputs.cache
+C:\Code\Krummert\Krummert\Krummert.Api\obj\Debug\netcoreapp2.0\Krummert.Api.AssemblyInfoInputs.cache
+C:\Code\Krummert\Krummert\Krummert.Api\obj\Debug\netcoreapp2.0\Krummert.Api.AssemblyInfo.cs
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.Api.deps.json
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.Api.runtimeconfig.json
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.Api.runtimeconfig.dev.json
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.Api.dll
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.BLL.dll
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.DLL.dll
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.BLL.pdb
+C:\Code\Krummert\Krummert\Krummert.Api\bin\Debug\netcoreapp2.0\Krummert.DLL.pdb
+C:\Code\Krummert\Krummert\Krummert.Api\obj\Debug\netcoreapp2.0\Krummert.Api.csproj.CopyComplete

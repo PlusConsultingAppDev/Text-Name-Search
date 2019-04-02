@@ -1,0 +1,82 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <h1>My Search App</h1>
+    <p>
+      Please enter a name on right to save the name to list.  Upon saving a name, the search is conducted with count in the results.  
+    </p>
+    <div *ngIf="!isLoading">
+      <div class="row">
+        <div class="col col-md-8">
+          <h2>Current Names</h2>
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">-</th>
+                <th scope="col">First</th>
+                <th scope="col">Middle</th>
+                <th scope="col">Last</th>
+                <th scope="col">Instance Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let name of names">
+                <td scope="row">
+                  <a (click)="selectItem($event, name)">Edit</a>&nbsp;&nbsp;
+                  <a (click)="deleteItem($event, name)">Delete</a>
+                </td>
+                <td>{{name.firstName}}</td>
+                <td>{{name.middleName}}</td>
+                <td>{{name.lastName}}</td>
+                <td>{{name.count}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col col-md-4">
+          <h2>Enter New Name</h2>
+          <form [formGroup]="myForm" (ngSubmit)="submitItem()">
+            <div class="row">
+              <div class="col col-sm-12">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    First Name
+                  </div>
+                  <div class="col col-sm-9">
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="myForm.controls.firstName.valid ? 'border-success': 'border-danger'">
+                  </div>
+                </div>
+              </div>
+              <div class="col col-sm-12">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    Middle Name
+                  </div>
+                  <div class="col col-sm-9">
+                    <input type="text" formControlName="middleName" class="form-control" [ngClass]="myForm.controls.middleName.valid ? 'border-success': 'border-danger'">
+                  </div>
+                </div>
+              </div>
+              <div class="col col-sm-12">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    Last Name
+                  </div>
+                  <div class="col col-sm-9">
+                    <input type="text" formControlName="lastName" class="form-control" [ngClass]="myForm.controls.lastName.valid ? 'border-success': 'border-danger'">
+                  </div>
+                </div>
+                <div class="col col-sm-12">
+                  <button *ngIf="myForm.controls.firstName.valid && myForm.controls.middleName.valid && myForm.controls.lastName.valid" type="submit" class="btn btn-primary">Submit</button>
+                  <label *ngIf="!(myForm.controls.firstName.valid && myForm.controls.middleName.valid && myForm.controls.lastName.valid)">Fix Errors</label>
+                  <button type="button" class="btn btn-light" (click)="selectItem(null, null)">Reset</button>
+                  <input type="hidden" formControlName="id">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
